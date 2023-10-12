@@ -1,0 +1,17 @@
+.header{
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    padding: 1%;
+
+}
+
+.brand{
+    width: 200px;
+}
+
+.widgets{
+    display: flex;
+    justify-content: end;
+    width: 200px;
+}
