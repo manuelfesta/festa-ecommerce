@@ -1,34 +1,30 @@
-import './Navbar.css'
+import './NavBar.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from '../CartWidget/CartWidget';
+import { NavLink } from 'react-router-dom';
 
 
-const NavBar = () => {
-  return (
+
+function NavBar() {
+return (
     <Navbar expand="lg" className="header">
         <Container fluid>
-            <Navbar.Brand className="brand" href="./">Mi Tienda</Navbar.Brand>
+            <NavLink to="/"> <div className='brand'><Navbar.Brand>Mi Tienda</Navbar.Brand></div></NavLink> 
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
-                <Nav
-                    className="m-auto my-2 my-lg-0"
-                    style={{ maxHeight: '100px' }}
-                    navbarScroll
-                >
-                <Nav.Link href="#">Categoria 1</Nav.Link>
-                <Nav.Link href="#">Categoria 2</Nav.Link>
-                <Nav.Link href="#">Categoria 3</Nav.Link>
+                <Nav className="m-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
+                <NavLink className="nav-link" to="/categoria/zapatillas">Zapatillas</NavLink>
+                <NavLink className="nav-link" to="/categoria/remeras">Remeras</NavLink>
+                <NavLink className="nav-link" to="/categoria/buzos">Buzos</NavLink>
                 </Nav>
-                <div className="widgets">
-                    <CartWidget />
-                </div>
+                <div className="cart"><CartWidget /></div>
             </Navbar.Collapse>
             
         </Container>
     </Navbar>
-);
+)
 }
 
 export default NavBar

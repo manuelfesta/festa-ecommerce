@@ -1,8 +1,13 @@
-.home {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-    justify-content: center;
-    align-content: center;
+.container{
+    min-height: 90vh;
+    max-width: 100vw;
+    padding: 4%;
+}
+
+.row{
     align-items: center;
 }
+
+.col{
+    max-width: 18rem;
+} 
